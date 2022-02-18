@@ -11,7 +11,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Example({lightMode, setLightMode}) {
 
   const [navigation, setNavigation] = useState([
     { name: 'Home', href: '#', current: true },
@@ -21,14 +21,14 @@ export default function Example() {
    
   ])
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="dark:bg-gray-800" >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 dark:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -58,7 +58,9 @@ export default function Example() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button class="bg-gray-800 hover:bg-gray-900 text-gray-200 font-bold py-2 px-4 border border-gray-600 rounded">
+              <button onClick={()=> {
+                lightMode === 'dark' ? setLightMode('') : setLightMode('dark')
+              }} className="bg-gray-800 hover:bg-gray-900 text-gray-200 font-bold py-2 px-4 border border-gray-600 rounded">
                 <LightModeIcon sx={{width:'0.8em'}}/>
 </button>
 
