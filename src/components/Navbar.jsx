@@ -21,14 +21,14 @@ export default function Example({lightMode, setLightMode}) {
    
   ])
   return (
-    <Disclosure as="nav" className="dark:bg-gray-800" >
+    <Disclosure as="nav" className="bg-white dark:bg-gray-800" >
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 dark:bg-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="text-gray-800 hover:bg-gray-200 hover:text-gray-800 inline-flex items-center justify-center p-2 rounded-md dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-2 dark:focus:ring-inset">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -46,7 +46,7 @@ export default function Example({lightMode, setLightMode}) {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-white' : 'text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -60,7 +60,7 @@ export default function Example({lightMode, setLightMode}) {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button onClick={()=> {
                 lightMode === 'dark' ? setLightMode('') : setLightMode('dark')
-              }} className="bg-gray-800 hover:bg-gray-900 text-gray-200 font-bold py-2 px-4 border border-gray-600 rounded">
+              }} className="dark:bg-gray-800 bg-white dark:hover:bg-gray-900 hover:bg-gray-200 dark:text-gray-200 text-gray-600 font-bold py-2 px-4 border dark:border-gray-700 rounded">
                 <LightModeIcon sx={{width:'0.8em'}}/>
 </button>
 
