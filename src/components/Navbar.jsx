@@ -4,6 +4,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 
 import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 
 
@@ -11,7 +12,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example({lightMode, setLightMode}) {
+export default function Navbar({lightMode, setLightMode}) {
 
   const [navigation, setNavigation] = useState([
     { name: 'Home', href: '#', current: true },
@@ -61,7 +62,8 @@ export default function Example({lightMode, setLightMode}) {
               <button onClick={()=> {
                 lightMode === 'dark' ? setLightMode('') : setLightMode('dark')
               }} className="dark:bg-gray-800 bg-white dark:hover:bg-gray-900 hover:bg-gray-200 dark:text-gray-200 text-gray-600 font-bold py-2 px-4 border dark:border-gray-700 rounded">
-                <LightModeIcon sx={{width:'0.8em'}}/>
+                {lightMode === 'dark' ? <LightModeIcon sx={{width:'0.8em'}}/> : <DarkModeIcon sx={{width:'0.8em'}}/> }
+                
 </button>
 
                 {/* Profile dropdown */}
