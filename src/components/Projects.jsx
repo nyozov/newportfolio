@@ -80,7 +80,7 @@ export default function Example() {
                 <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                   Code
                 </button>
-                <button class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
+                <button class=" disabled bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
                   Website
                 </button>
               </div>

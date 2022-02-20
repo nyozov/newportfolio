@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import NameBox from './components/NameBox';
 import Projects from './components/Projects';
+import Skills from './components/Skills'
 import { useState } from 'react'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className={lightMode}>
       <Navbar lightMode={lightMode} setLightMode={setLightMode}/>
       <NameBox/>
+      <Skills/>
       <Projects/>
       
     </div>
