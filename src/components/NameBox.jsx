@@ -1,6 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 export default function NameBox() {
@@ -38,20 +39,19 @@ export default function NameBox() {
               <div className="mt-5 sm:mt-8 sm:flex justify-center">
                 <div className="rounded-md shadow">
                   <a
-                    href="#"
+                    href=""
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                   >
                     .resume
                   </a>
                 </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black dark:text-indigo-700 dark:bg-indigo-100 hover:bg-gray-800 dark:hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-                  >
+                <Link to='/about'>
+                <div className="mt-3 sm:mt-0 sm:ml-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black dark:text-indigo-700 dark:bg-indigo-100 hover:bg-gray-800 dark:hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                 
                     .aboutMe
-                  </a>
+              
                 </div>
+                </Link>
               </div>
             </div>
           </main>

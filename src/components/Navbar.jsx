@@ -2,7 +2,8 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
+import update from 'react-addons-update'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 
@@ -15,8 +16,8 @@ function classNames(...classes) {
 export default function Navbar({lightMode, setLightMode}) {
 
   const [navigation, setNavigation] = useState([
-    { name: 'Home', href: '#', current: true },
-    { name: 'About', href: '#', current: false },
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: 'about', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Contact Me', href: '#', current: false}
    
@@ -43,9 +44,25 @@ export default function Navbar({lightMode, setLightMode}) {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link to={item.href}
                         key={item.name}
-                        href={item.href}
+                       onClick={()=>{
+                         const newData = navigation.map(el => {
+                           if(el.name === item.name)
+                           return Object.assign({}, el, {current:true})
+                           return el
+                         })
+
+                         const newData2 = newData.map(el => {
+                           if (el.name !== item.name)
+                           return Object.assign({}, el, {current: false})
+                           return el
+                         })
+                     setNavigation(newData2
+                     )
+                        console.log(navigation)
+                        
+                    }}
                         className={classNames(
                           item.current ? 'bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-white' : 'text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
@@ -53,7 +70,7 @@ export default function Navbar({lightMode, setLightMode}) {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -75,10 +92,11 @@ export default function Navbar({lightMode, setLightMode}) {
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Disclosure.Button
+                <Link
+              
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  to={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
@@ -86,7 +104,7 @@ export default function Navbar({lightMode, setLightMode}) {
                   aria-current={item.current ? 'page' : undefined}
                 >
                   {item.name}
-                </Disclosure.Button>
+                </Link>
               ))}
             </div>
           </Disclosure.Panel>
