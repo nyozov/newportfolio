@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import update from 'react-addons-update'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import navChange from '../hooks/navChange'
 
 
 
@@ -13,15 +14,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar({lightMode, setLightMode}) {
+export default function Navbar({navigation, setNavigation, lightMode, setLightMode}) {
 
-  const [navigation, setNavigation] = useState([
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: 'about', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Contact Me', href: '#', current: false}
-   
-  ])
+
   return (
     <Disclosure as="nav" className="bg-white dark:bg-gray-800" >
       {({ open }) => (
@@ -46,23 +41,10 @@ export default function Navbar({lightMode, setLightMode}) {
                     {navigation.map((item) => (
                       <Link to={item.href}
                         key={item.name}
-                       onClick={()=>{
-                         const newData = navigation.map(el => {
-                           if(el.name === item.name)
-                           return Object.assign({}, el, {current:true})
-                           return el
-                         })
-
-                         const newData2 = newData.map(el => {
-                           if (el.name !== item.name)
-                           return Object.assign({}, el, {current: false})
-                           return el
-                         })
-                     setNavigation(newData2
-                     )
-                        console.log(navigation)
+                       onClick={()=>navChange(item, navigation, setNavigation)}
+                         
                         
-                    }}
+                    
                         className={classNames(
                           item.current ? 'bg-gray-200 text-gray-800 dark:bg-gray-900 dark:text-white' : 'text-gray-800 hover:bg-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'

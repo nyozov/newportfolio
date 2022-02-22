@@ -12,18 +12,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [lightMode, setLightMode] = useState("dark");
+  const [navigation, setNavigation] = useState([
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: 'about', current: false },
+    { name: 'Projects', href: 'projects', current: false },
+    { name: 'Contact Me', href: 'contact', current: false}
+   
+  ])
+
   return (
     <Router>
       <div className={lightMode}>
         <div className="bg-white dark:bg-gray-900">
-          <Navbar lightMode={lightMode} setLightMode={setLightMode} />
+          <Navbar navigation={navigation} setNavigation={setNavigation} lightMode={lightMode} setLightMode={setLightMode} />
 
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <NameBox />
+                  <NameBox navigation={navigation} setNavigation={setNavigation}/>
                   <motion.div
                     initial={{ opacity: 0 }}
                     transition={{ ease: "easeIn", delay: 0.2 }}
@@ -38,15 +46,28 @@ function App() {
                   >
                     <Skills />
                   </motion.div>
-                  <Projects />
+                
                 </>
               }
             />
             <Route path="/about" element={
               <About/>
             }/>
+            <Route path="/projects" element={
+            
+              <Projects/>
+             
+            }/>
+             <Route path="/contact" element={
+              <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ ease: "easeIn", delay: 0.2 }}
+              animate={{ opacity: 1 }}
+            >
+              <Footer/>
+              </motion.div>
+            }/>
           </Routes>
-          <Footer />
         </div>
       </div>
     </Router>
