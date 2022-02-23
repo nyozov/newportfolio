@@ -39,13 +39,7 @@ function App() {
                   >
                     <img className="dev-img" src={devArt} />
                   </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    transition={{ delay: 0.1 }}
-                    whileInView={{ opacity: 1 }}
-                  >
-                    <Skills />
-                  </motion.div>
+                 
                 
                 </>
               }

@@ -79,6 +79,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                   key={item.name}
                   as="a"
                   to={item.href}
+                  onClick={()=>navChange(item, navigation, setNavigation)}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'

@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function About() {
   return (
@@ -30,7 +32,19 @@ export default function About() {
                             <div className="w-full flex justify-center pt-5 pb-5">
                                
                                 
-                                
+                            <div className="bg-transparent rounded flex items-center">
+              <a target='_blank' href='https://www.linkedin.com/in/nyozov/'>
+                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
+                   <LinkedInIcon/>
+                </div>
+                </a>
+                <a target="_blank" href="https://github.com/nyozov">
+                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
+                    <GitHubIcon/>
+                </div>
+                </a>
+               
+            </div>
                             </div>
                         </div>
                     </div>
