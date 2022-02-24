@@ -80,14 +80,7 @@ export default function About({ navigation, setNavigation }) {
             </li>
           </ul>
         </div>
-        <div className="mt-6 lg:mt-0">
-          <button className="mx-2 my-2 bg-white transition duration-150 ease-in-out focus:outline-none hover:bg-gray-100 rounded text-indigo-700 px-6 py-2 text-sm">
-            Back
-          </button>
-          <button className="transition duration-150 ease-in-out hover:bg-indigo-600 focus:outline-none border bg-indigo-700 rounded text-white px-8 py-2 text-sm">
-            Edit Profile
-          </button>
-        </div>
+   
       </div>
       <motion.div
         className="flex justify-center flex-col"
