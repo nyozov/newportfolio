@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
+import Form from "./Form";
 
 export default function Footer() {
-  const [formResults, setFormResults] = useState({
-    
-  })
+  
 
 
   return (
@@ -94,8 +92,9 @@ export default function Footer() {
       >
         {/* Remove class [ h-64 ] when adding a card block */}
         {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
-        <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-6 gap-8">
+        <div className="container mx-auto">
           {/* Place your content here */}
+          <Form/>
           
         </div>
       </motion.div>
