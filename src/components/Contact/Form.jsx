@@ -7,10 +7,20 @@ export default function Form() {
   });
   const [charNumber, setCharNumber] = useState(200);
 
+  const handleWordCount = (e) => {
+    const charCount = e.target.value.length;
+    const charLeft = 200 - charCount;
+    setCharNumber(charLeft);
+  };
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
+    
+      
+    
     setFormResults((values) => ({ ...values, [name]: value }));
+    
+    
   };
 
   const handleSubmit = (event) => {
@@ -18,15 +28,11 @@ export default function Form() {
     console.log(formResults)
   };
 
-  const handleWordCount = (e) => {
-    const charCount = e.target.value.length;
-    const charLeft = 200 - charCount;
-    setCharNumber(charLeft);
-  };
+  
 
   return (
     <form id="login" onSubmit={handleSubmit}>
-      <div className="bg-white dark:bg-gray-800">
+      <div className="bg-white dark:bg-gray-800 xl:px-4">
         <div className="container mx-auto bg-white dark:bg-gray-800 rounded">
           <div className="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white dark:bg-gray-800">
             <div className="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
