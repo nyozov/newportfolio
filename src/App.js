@@ -45,7 +45,7 @@ function App() {
               }
             />
             <Route path="/about" element={
-              <About/>
+              <About navigation={navigation} setNavigation={setNavigation}/>
             }/>
             <Route path="/projects" element={
             

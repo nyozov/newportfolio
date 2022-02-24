@@ -28,6 +28,8 @@ code {
   height:20em;
 }
 
+
+
 @media only screen and (max-width: 1200px) {
   .dev-img{
     visibility: hidden;
