@@ -7,7 +7,7 @@ import navChange from "../hooks/navChange";
 
 export default function NameBox({navigation, setNavigation}) {
   return (
-    <div className="h-screen relative dark:bg-gray-900 overflow-hidden">
+    <div className="relative dark:bg-gray-900 overflow-hidden">
       <motion.div className="max-w-7xl"
       initial={{ opacity: 0 }}
       transition={{ease:'easeIn', delay: 0.2}}

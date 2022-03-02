@@ -6,7 +6,7 @@ import navChange from "../hooks/navChange";
 
 export default function About({ navigation, setNavigation }) {
   return (
-    <div className="absolute dark:bg-gray-900 bg-gray-200 w-full h-screen">
+    <div className="absolute dark:bg-gray-900 bg-gray-200 w-full">
       <div className="dark:bg-gray-900 my-6 lg:my-12 container px-6 mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between pb-4 border-b border-gray-300">
         <div>
           <h4 className="text-2xl font-bold leading-tight dark:text-gray-200 text-gray-800">

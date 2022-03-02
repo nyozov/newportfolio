@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div className={lightMode}>
-        <div className="bg-white dark:bg-gray-900">
+        <div className="bg-white dark:bg-gray-900 min-h-screen">
           <Navbar navigation={navigation} setNavigation={setNavigation} lightMode={lightMode} setLightMode={setLightMode} />
 
           <Routes>
