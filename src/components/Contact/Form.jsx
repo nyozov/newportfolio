@@ -27,15 +27,20 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const headers = {
+      'Content-Type': 'text/plain'
+  };
     console.log(formResults);
     setLoading(true);
     const { name, message } = formResults;
 
     axios
-      .post("https://portfolio-api.netlify.app/.netlify/functions/api/email", {
+      .post("/.netlify/functions/api/email", {
         name,
         message,
-      })
+      },
+      {headers}
+      )
       .then((response) => {
         console.log(response, "success");
         setLoading(false);
