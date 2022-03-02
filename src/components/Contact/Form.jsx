@@ -25,27 +25,28 @@ export default function Form() {
     setFormResults((values) => ({ ...values, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formResults);
     setLoading(true);
     const { name, message } = formResults;
+try {
+  const response = await axios
+  .post("https://portfolio-api.netlify.app/.netlify/functions/api/email", {
+    name,
+    message,
+  })
 
-    axios
-      .post("https://portfolio-api.netlify.app/.netlify/functions/api/email", {
-        name,
-        message,
-      })
-      .then((response) => {
-        console.log(response, "success");
-        setLoading(false);
-        setMode("success");
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-        setMode("error");
-      });
+    console.log(response, "success");
+    setLoading(false);
+    setMode("success");
+  
+} catch (error) {
+  console.log(error)
+  setMode('error')
+}
+   
+     
   };
 
   return (
