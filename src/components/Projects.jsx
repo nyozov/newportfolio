@@ -10,34 +10,45 @@ export default function Projects() {
       badges: ["React", "Express"],
       img: "https://github.com/nyozov/etune/raw/master/src/assets/wide-view.png?raw=true",
       url: "https://github.com/nyozov/etune",
+      desc: "Online vehicle ECU tuning service where a user can fill out a form, pay through Stripe, and then receive an email copy of their purchase through Twilio SendGrid",
     },
     {
       name: "Therapify",
       badges: ["React", "Express"],
       img: therapifyImg,
       url: "https://github.com/habibcodes/therapify",
+      desc: "Tele-health service connecting a patient and a practitioner through features including a calendar for appointments, text-chat, and video-chat through WebRTC",
     },
     {
       name: "Weather App",
       badges: ["React"],
       img: "https://github.com/nyozov/weather-app/raw/master/public/weather-app-gif.gif?raw=true",
+      desc: "Simple weather app where a user can type in a location, and in return they will recieve a weather report including degrees, humidity, and conditions.",
     },
     {
       name: "Scheduler",
       badges: ["React"],
       img: "https://github.com/nyozov/scheduler/raw/master/docs/creating-interview.png?raw=true",
+      desc: "A user can book an appointment by selecing a day, selecting an open spot, typing in their name, and selecting an interviewer from a list.",
     },
     {
       name: "Url Shortener",
       badges: ["Express", "Vanilla JS"],
       img: "https://github.com/nyozov/tinyapp/raw/master/docs/newurl-page.png?raw=true",
+      desc: "Full stack web application that allows users to shorten long URLs (à la bit.ly). A user's URLs are saved to a PSQL database. Uses cookies and password encryption. ",
     },
     {
       name: "Tweeter",
       badges: ["JQuery"],
       img: "https://github.com/nyozov/tweeter/raw/master/docs/tweet_widescreen.png?raw=true",
+      desc: "Single-page AJAX based Twitter clone that uses jQuery, HTML5, and CSS3. A user can write a message, and it will show up on their profile.",
     },
-    { name: "Aircall", badges: ["React"], img: aircallimg },
+    {
+      name: "Aircall",
+      badges: ["React"],
+      img: aircallimg,
+      desc: "Frontend coding challenge - a user can look through phone calls, see call information, and archive them. Uses given api to POST requests through axios.",
+    },
   ];
 
   return (
@@ -48,73 +59,7 @@ export default function Projects() {
             <h4 className="text-2xl font-bold leading-tight dark:text-gray-200 text-gray-800">
               Recent Projects
             </h4>
-            <ul className="flex flex-col md:flex-row items-start md:items-center text-gray-600 text-sm mt-3">
-              <li className="flex items-center mr-3 mt-3 md:mt-0">
-                <span className="mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-paperclip"
-                    width={16}
-                    height={16}
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9 l6.5 -6.5" />
-                  </svg>
-                </span>
-                <span>Active</span>
-              </li>
-              <li className="flex items-center mr-3 mt-3 md:mt-0">
-                <span className="mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-trending-up"
-                    width={16}
-                    height={16}
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <polyline points="3 17 9 11 13 15 21 7" />
-                    <polyline points="14 7 21 7 21 14" />
-                  </svg>
-                </span>
-                <span> Trending</span>
-              </li>
-              <li className="flex items-center mt-3 md:mt-0">
-                <span className="mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="icon icon-tabler icon-tabler-plane-departure"
-                    width={16}
-                    height={16}
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <path
-                      d="M15 12h5a2 2 0 0 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3z"
-                      transform="rotate(-15 12 12) translate(0 -1)"
-                    />
-                    <line x1={3} y1={21} x2={21} y2={21} />
-                  </svg>
-                </span>
-                <span>Started on 29 Jan 2020</span>
-              </li>
-            </ul>
+           
           </div>
         </div>
         {/* Page title ends */}
@@ -156,31 +101,22 @@ export default function Projects() {
                       })}
                     </div>
 
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of
-                      2021 so far, in reverse chronological order.
+                    <p className="mb-3 mt-2 font-normal text-gray-700 dark:text-gray-400">
+                      {project.desc}
                     </p>
-
-                    <a
+                    <div className="relative left-0 bottom-0">
+                  <a
                       href="#"
-                      class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      className="items-center py-2 px-3 text-sm font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-blue-800"
                     >
                       Code
-                      <svg
-                        class="ml-2 -mr-1 w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
                     </a>
+                    </div>
+                
                   </div>
+               
                 </div>
+                
               );
             })}
           </div>

@@ -32,7 +32,7 @@ export default function Form() {
     const { name, message } = formResults;
 
     axios
-      .post("http://localhost:9000/.netlify/functions/api/email", {
+      .post("https://portfolio-api.netlify.app/.netlify/functions/api/email", {
         name,
         message,
       })
