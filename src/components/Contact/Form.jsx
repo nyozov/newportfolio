@@ -27,28 +27,25 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const headers = {
-      'Content-Type': 'text/plain'
-  };
+
     console.log(formResults);
-    setLoading(true);
+
     const { name, message } = formResults;
 
     axios
-      .post("/.netlify/functions/api/email", {
+      .post("https://portfolio-api.netlify.app/.netlify/functions/api/email", {
         name,
         message,
-      },
-      {headers}
-      )
-      .then((response) => {
-        console.log(response, "success");
-        setLoading(false);
-        setMode("success");
+      })
+      .then((res) => {
+        if (res.data.success) {
+          setMode("success");
+        } else {
+          setMode("error");
+        }
       })
       .catch((err) => {
         console.log(err);
-        setLoading(false);
         setMode("error");
       });
   };
