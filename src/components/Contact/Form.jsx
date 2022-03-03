@@ -27,6 +27,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setLoading(true)
 
     console.log(formResults);
 
@@ -39,12 +40,14 @@ export default function Form() {
       })
       .then((res) => {
         if (res.data.success) {
+          setLoading(false)
           setMode("success");
         } else {
           setMode("error");
         }
       })
       .catch((err) => {
+        setLoading(false)
         console.log(err);
         setMode("error");
       });
