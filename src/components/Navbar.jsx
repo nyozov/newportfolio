@@ -1,9 +1,8 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+
+import { Disclosure, } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import update from 'react-addons-update'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import navChange from '../hooks/navChange'
@@ -38,7 +37,9 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
+                    
                     {navigation.map((item) => (
+                      <Disclosure.Button>
                       <Link to={item.href}
                         key={item.name}
                        onClick={()=>navChange(item, navigation, setNavigation)}
@@ -53,6 +54,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                       >
                         {item.name}
                       </Link>
+                      </Disclosure.Button>
                     ))}
                   </div>
                 </div>
@@ -65,7 +67,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                 
 </button>
 
-                {/* Profile dropdown */}
+               
                 
               </div>
             </div>
@@ -81,7 +83,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                   to={item.href}
                   onClick={()=>navChange(item, navigation, setNavigation)}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-gray-900 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}

@@ -10,44 +10,49 @@ export default function Projects() {
       badges: ["React", "Express"],
       img: "https://github.com/nyozov/etune/raw/master/src/assets/wide-view.png?raw=true",
       url: "https://github.com/nyozov/etune",
-      desc: "Online vehicle ECU tuning service where a user can fill out a form, pay through Stripe, and then receive an email copy of their purchase through Twilio SendGrid",
+      desc: "Online vehicle ECU tuning service where a user can fill out a form, pay through Stripe, and then receive an email copy of their purchase through Twilio SendGrid.",
     },
     {
       name: "Therapify",
       badges: ["React", "Express"],
       img: therapifyImg,
       url: "https://github.com/habibcodes/therapify",
-      desc: "Tele-health service connecting a patient and a practitioner through features including a calendar for appointments, text-chat, and video-chat through WebRTC",
+      desc: "Tele-health service connecting a patient and a practitioner through features including a calendar for appointments, text-chat, and video-chat through WebRTC.",
     },
     {
       name: "Weather App",
       badges: ["React"],
       img: "https://github.com/nyozov/weather-app/raw/master/public/weather-app-gif.gif?raw=true",
+      url: "https://github.com/nyozov/weather-app",
       desc: "Simple weather app where a user can type in a location, and in return they will recieve a weather report including degrees, humidity, and conditions.",
     },
     {
       name: "Scheduler",
       badges: ["React"],
       img: "https://github.com/nyozov/scheduler/raw/master/docs/creating-interview.png?raw=true",
+      url: "https://github.com/nyozov/scheduler",
       desc: "A user can book an appointment by selecing a day, selecting an open spot, typing in their name, and selecting an interviewer from a list.",
     },
     {
       name: "Url Shortener",
       badges: ["Express", "Vanilla JS"],
       img: "https://github.com/nyozov/tinyapp/raw/master/docs/newurl-page.png?raw=true",
+      url: "https://github.com/nyozov/tinyapp",
       desc: "Full stack web application that allows users to shorten long URLs (à la bit.ly). A user's URLs are saved to a PSQL database. Uses cookies and password encryption. ",
     },
     {
       name: "Tweeter",
       badges: ["JQuery"],
       img: "https://github.com/nyozov/tweeter/raw/master/docs/tweet_widescreen.png?raw=true",
+      url: "https://github.com/nyozov/tweeter",
       desc: "Single-page AJAX based Twitter clone that uses jQuery, HTML5, and CSS3. A user can write a message, and it will show up on their profile.",
     },
     {
       name: "Aircall",
       badges: ["React"],
       img: aircallimg,
-      desc: "Frontend coding challenge - a user can look through phone calls, see call information, and archive them. Uses given api to POST requests through axios.",
+      url: "https://github.com/nyozov/aircall",
+      desc: "Frontend coding challenge - a user can look through phone calls, see call information, and archive them. Uses given api to POST requests through Axios.",
     },
   ];
 
@@ -67,15 +72,15 @@ export default function Projects() {
           initial={{ opacity: 0 }}
           transition={{ ease: "easeIn", delay: 0.3 }}
           animate={{ opacity: 1 }}
-          className="container dark:bg-gray-900 mx-auto px-6"
+          className="container sm:justify-center dark:bg-gray-900 mx-auto px-6"
         >
-          {/* Remove class [ h-64 ] when adding a card block */}
-          {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
+   
+     
           <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-6 gap-8">
-            {/* Place your content here */}
+           
             {myProjects.map((project) => {
               return (
-                <div className="max-w-sm bg-white p-2 m-2 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div className="relative max-w-sm bg-white p-2 m-2 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <img
                     className="h-52 w-96 object-cover rounded-t-lg"
                     src={project.img}
@@ -101,17 +106,18 @@ export default function Projects() {
                       })}
                     </div>
 
-                    <p className="mb-3 mt-2 font-normal text-gray-700 dark:text-gray-400">
+                    <p className="mb-3 my-2 mb-8 font-normal text-gray-700 dark:text-gray-400">
                       {project.desc}
                     </p>
-                    <div className="relative left-0 bottom-0">
+                    
                   <a
-                      href="#"
-                      className="items-center py-2 px-3 text-sm font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-blue-800"
+                      target='_blank'
+                      href={project.url}
+                      className="absolute bottom-4 left-6 items-center py-2 px-3 text-sm font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700"
                     >
                       Code
                     </a>
-                    </div>
+                    
                 
                   </div>
                

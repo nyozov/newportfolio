@@ -22,16 +22,16 @@ export default function About({ navigation, setNavigation }) {
         transition={{ ease: "easeIn", delay: 0.2 }}
         animate={{ opacity: 1 }}
       >
-        <div className="w-full bg-gray-100 dark:bg-gray-800 px-10 pt-10">
+        <div className="w-full bg-gray-200 dark:bg-gray-900 px-10 pt-10">
           <div className="container mx-auto">
-            <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            <div className="lg:flex  md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
               <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
                 <div className="rounded overflow-hidden shadow-md bg-white">
-                  <div className="absolute -mt-20 w-full flex justify-center">
+                  <div className="absolute  -mt-20 w-full flex justify-center">
                     <div className="h-32 w-32">
                       <img
                         src="https://media-exp1.licdn.com/dms/image/C4E03AQFncExWI0q-nw/profile-displayphoto-shrink_400_400/0/1638999049230?e=1651104000&v=beta&t=k_V52XTfucbUwCKieNMXsB01FKFVFoa0BnUc84ak7-0"
-                        alt
+                        alt="profile-pic"
                         className="rounded-full object-cover h-full w-full shadow-md"
                       />
                     </div>
@@ -58,9 +58,9 @@ export default function About({ navigation, setNavigation }) {
                         Contact Me
                       </div>
                     </Link>
-                    <div className="mt-3 rounded-md shadow flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-black">
+                    <a target="_blank" href="https://resume.creddle.io/resume/dykdi4p41za" className="mt-3 rounded-md shadow flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-black">
                       My Resume
-                    </div>
+                    </a>
 
                     <div className="w-full flex justify-center pt-5 pb-5">
                       <div className="flex items-center">

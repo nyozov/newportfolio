@@ -19,8 +19,14 @@ export default function Form() {
   };
 
   const handleChange = (event) => {
+    
+   
     const name = event.target.name;
     const value = event.target.value;
+    if (name === 'message'){
+      handleWordCount(event)
+    }
+    
 
     setFormResults((values) => ({ ...values, [name]: value }));
   };
@@ -62,26 +68,31 @@ export default function Form() {
       )}
       {mode === "success" && (
         <div className="dark:text-green-500 flex justify-center">
-          Email successfuly sent
+          Email successfully sent
         </div>
       )}
       {loading && <Loading />}
       {success && <div className="dark:text-white">Email Sent!</div>}
       {!loading && mode === "" && (
         <form id="login" onSubmit={handleSubmit}>
-          <div className="bg-white dark:bg-gray-800 xl:px-4">
-            <div className="container mx-auto bg-white dark:bg-gray-800 rounded">
-              <div className="xl:w-full border-b border-gray-300 dark:border-gray-700 py-5 bg-white dark:bg-gray-800">
-                <div className="flex w-11/12 mx-auto xl:w-full xl:mx-0 items-center">
+          <div className="bg-white min-w-fit dark:bg-gray-800 lg:p-4 xl:p-4 rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div className="container mx-auto bg-white dark:bg-gray-800 rounded ">
+              <div className="m-1 border-b border-gray-300 dark:border-gray-700 py-5 bg-white dark:bg-gray-800">
+                <div className="flex w-11/12 mx-auto  rounded-lg justify-center items-center">
+                  
                   <p className="text-lg text-gray-800 dark:text-gray-100 font-bold">
                     Send Me An Email
                   </p>
                   <div className="ml-2 cursor-pointer text-gray-600 dark:text-gray-400"></div>
+                  
                 </div>
               </div>
               <div className="mx-auto">
-                <div className="xl:w-9/12 w-11/12 mx-auto xl:mx-0">
-                  <div className="mt-16 flex flex-col xl:w-2/6 lg:w-1/2 md:w-1/2 w-full">
+                <div className=" w-11/12 mx-auto flex flex-col items-center justify-center ">
+                <p className="dark:text-gray-500 text-gray-600 text-sm">
+                    You can send me an email through this form or contact me through LinkedIn.
+                  </p>
+                  <div className="mt-16 flex flex-col  w-full">
                     <label
                       htmlFor="name"
                       className="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100"
@@ -93,12 +104,13 @@ export default function Form() {
                       onChange={handleChange}
                       id="name"
                       name="name"
+                      maxLength="50"
                       required
-                      className="border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-gray-500 dark:text-gray-400"
+                      className="border  border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm focus:outline-none focus:border-indigo-700 bg-transparent placeholder-gray-500 text-gray-500 dark:text-gray-400"
                       placeholder="Your name or email"
                     />
                   </div>
-                  <div className="mt-8 flex flex-col xl:w-3/5 lg:w-1/2 md:w-1/2 w-full">
+                  <div className="mt-8 flex flex-col  w-full">
                     <label
                       htmlFor="messaget"
                       className="pb-2 text-sm font-bold text-gray-800 dark:text-gray-100"

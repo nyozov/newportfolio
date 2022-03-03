@@ -41,7 +41,7 @@ export default function NameBox({navigation, setNavigation}) {
                
             </div>
         </div>
-              <div className="mt-5 sm:mt-8 sm:flex justify-center">
+              <div className="mt-5 sm:mt-8 flex justify-center">
               <Link
                 to='/projects'
                 onClick={()=>{
