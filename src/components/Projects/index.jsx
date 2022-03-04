@@ -49,9 +49,10 @@ export default function Projects() {
                       })}
                     </div>
 
-                    <p className="mb-3 my-2 mb-8 font-normal text-gray-700 dark:text-gray-400">
+                    <p className="mb-3 my-2 mb-12 font-normal text-gray-700 dark:text-gray-400">
                       {project.desc}
                     </p>
+
 
                     <a
                       target="_blank"
@@ -59,6 +60,14 @@ export default function Projects() {
                       className="absolute bottom-4 left-6 items-center py-2 px-3 text-sm font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-indigo-800 dark:bg-indigo-600 dark:hover:bg-indigo-700"
                     >
                       Code
+                    </a>
+                    <a
+                      target="_blank"
+                      href={project.siteUrl ? project.siteUrl : false}
+                      
+                      className={`absolute ${project.siteUrl ? '' : 'opacity-50 cursor-not-allowed'} bottom-4 right-6 items-center py-2 px-3 text-sm font-medium text-center text-indigo-700 bg-indigo-700 rounded-lg hover:bg-indigo-800 dark:bg-white dark:hover:bg-gray-200`}
+                    >
+                      Site
                     </a>
                   </div>
                 </div>

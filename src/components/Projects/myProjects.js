@@ -8,6 +8,7 @@ const myProjects = [
     badges: ["React", "Express"],
     img: "https://github.com/nyozov/etune/raw/master/src/assets/wide-view.png?raw=true",
     url: "https://github.com/nyozov/etune",
+    siteUrl: "https://nifty-chandrasekhar-58abcd.netlify.app/",
     desc: "Online vehicle ECU tuning service where a user can fill out a form, pay through Stripe, and then receive an email copy of their purchase through Twilio SendGrid.",
   },
   {
@@ -50,6 +51,7 @@ const myProjects = [
     badges: ["React"],
     img: aircallimg,
     url: "https://github.com/nyozov/aircall",
+    siteUrl: "https://pensive-brahmagupta-5e6c34.netlify.app/",
     desc: "Frontend coding challenge - a user can look through phone calls, see call information, and archive them. Uses given api to POST requests through Axios.",
   },
 ];

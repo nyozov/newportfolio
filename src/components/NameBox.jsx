@@ -27,14 +27,14 @@ export default function NameBox({navigation, setNavigation}) {
                 Full Stack Web Developer
               </p>
               <div className="pt-4 pb-0 flex justify-center">
-            <div className="bg-transparent border-2 border-gray-200 dark:border-gray-800 rounded flex items-center">
+            <div className="bg-transparent border-2 border-gray-300 dark:border-gray-800 rounded flex items-center">
               <a target='_blank' href='https://www.linkedin.com/in/nyozov/'>
-                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50 flex justify-center items-center cursor-pointer focus:bg-gray-100 dark:focus:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50 flex justify-center items-center  focus:bg-gray-100 dark:focus:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800">
                    <LinkedInIcon/>
                 </div>
                 </a>
                 <a target="_blank" href="https://github.com/nyozov">
-                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50 flex justify-center items-center cursor-pointer focus:bg-gray-100 dark:focus:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand dark:hover:text-brand text-gray-800 dark:text-gray-50 flex justify-center items-center  focus:bg-gray-100 dark:focus:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800">
                     <GitHubIcon/>
                 </div>
                 </a>
@@ -48,7 +48,7 @@ export default function NameBox({navigation, setNavigation}) {
                   navChange(navigation[2], navigation, setNavigation)
                 }}
                 >
-                <div className="mt-3 sm:mt-0 sm:ml-3 rounded-md shadow s:w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                <div className="mt-3 shadow-md w-36 sm:mt-0 sm:ml-3 rounded-md shadow s:w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                   
                     .projects
               
@@ -60,7 +60,7 @@ export default function NameBox({navigation, setNavigation}) {
                   navChange(navigation[1], navigation, setNavigation)
                 }}
                 >
-                <div className="mt-3 sm:mt-0 sm:ml-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 dark:text-indigo-700 dark:bg-indigo-100 hover:bg-black dark:hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                <div className="mt-3 shadow-md w-36 sm:mt-0 sm:ml-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 dark:text-indigo-700 dark:bg-indigo-100 hover:bg-black dark:hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
                  
                     .aboutMe
               
