@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import NameBox from "./components/NameBox";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Footer from "./components/Contact";
+import Contact from "./components/Contact";
 import devArt from "./assets/dev_art.png";
 import About from './components/About';
 import { useState, useEffect } from "react";
@@ -68,7 +68,7 @@ function App() {
             }/>
              <Route path="/contact" element={
               
-              <Footer/>
+              <Contact/>
               
             }/>
           </Routes>

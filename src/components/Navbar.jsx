@@ -39,7 +39,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                   <div className="flex space-x-4">
                     
                     {navigation.map((item) => (
-                      <Disclosure.Button>
+                  
                       <Link to={item.href}
                         key={item.name}
                        onClick={()=>navChange(item, navigation, setNavigation)}
@@ -54,7 +54,7 @@ export default function Navbar({navigation, setNavigation, lightMode, setLightMo
                       >
                         {item.name}
                       </Link>
-                      </Disclosure.Button>
+                   
                     ))}
                   </div>
                 </div>

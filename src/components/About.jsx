@@ -25,10 +25,10 @@ export default function About({ navigation, setNavigation }) {
         <div className="w-full bg-gray-200 dark:bg-gray-900 px-10 pt-10">
           <div className="container mx-auto">
             <div className="lg:flex  md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
-              <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                <div className="rounded overflow-hidden shadow-md bg-white">
-                  <div className="absolute  -mt-20 w-full flex justify-center">
-                    <div className="h-32 w-32">
+              <div className="xl:w-1/3 sm:w-3/4 md:w-3/5 relative mt-8 mb-8 sm:mb-8 xl:max-w-sm lg:w-2/5">
+                <div className="rounded overflow-hidden rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 bg-white dark:bg-gray-800">
+                  <div className="absolute -mt-20 w-full flex justify-center">
+                    <div className="h-32 w-32 ">
                       <img
                         src="https://media-exp1.licdn.com/dms/image/C4E03AQFncExWI0q-nw/profile-displayphoto-shrink_400_400/0/1638999049230?e=1651104000&v=beta&t=k_V52XTfucbUwCKieNMXsB01FKFVFoa0BnUc84ak7-0"
                         alt="profile-pic"
@@ -36,17 +36,19 @@ export default function About({ navigation, setNavigation }) {
                       />
                     </div>
                   </div>
-                  <div className="px-6 mt-16">
-                    <div className="font-bold text-3xl text-center pb-1">
+                  <div className="px-6 mt-16 dark:bg-gray-800">
+                    <div className="font-bold dark:text-white text-3xl text-center pb-1">
                       Nick Yozov
                     </div>
-                    <p className="text-gray-800 text-sm text-center">
+                    <p className="text-gray-800 dark:text-gray-400 text-sm text-center">
                       Jr Full Stack Developer
                     </p>
-                    <p className="text-center text-gray-600 text-base pt-3 font-normal">
+                    <p className="text-center text-gray-600 dark:text-gray-400 text-base pt-3 font-normal">
                       Web development bootcamp grad looking for an opportunity
                       to continue to advance my skills by working with industry
                       professionals.
+                      
+                      
                     </p>
                     <Link
                       to="/contact"
@@ -58,22 +60,22 @@ export default function About({ navigation, setNavigation }) {
                         Contact Me
                       </div>
                     </Link>
-                    <a target="_blank" href="https://resume.creddle.io/resume/dykdi4p41za" className="mt-3 rounded-md shadow flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-black">
+                    <a target="_blank" href="https://resume.creddle.io/resume/dykdi4p41za" className="mt-3 rounded-md shadow flex items-center justify-center px-2 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-black dark:bg-white dark:text-gray-800 dark:hover:bg-gray-200">
                       My Resume
                     </a>
 
                     <div className="w-full flex justify-center pt-5 pb-5">
-                      <div className="flex items-center">
+                      <div className="flex items-center ">
                         <a
                           target="_blank"
                           href="https://www.linkedin.com/in/nyozov/"
                         >
-                          <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
+                          <div className="w-16 h-12 dark:text-white dark:hover:text-gray-200 hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
                             <LinkedInIcon />
                           </div>
                         </a>
                         <a target="_blank" href="https://github.com/nyozov">
-                          <div className="w-16 h-12 focus:text-brand dark:focus:text-brand hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
+                          <div className="w-16 h-12 dark:text-white dark:hover:text-gray-200 hover:text-brand text-gray-800 hover:text-gray-600 flex justify-center items-center cursor-pointer">
                             <GitHubIcon />
                           </div>
                         </a>
