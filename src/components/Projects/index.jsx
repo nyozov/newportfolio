@@ -65,7 +65,7 @@ export default function Projects() {
                       target="_blank"
                       href={project.siteUrl ? project.siteUrl : false}
                       
-                      className={`absolute ${project.siteUrl ? '' : 'opacity-50 cursor-not-allowed'} bottom-4 right-6 items-center py-2 px-3 text-sm font-medium text-center text-indigo-700 bg-indigo-700 rounded-lg hover:bg-indigo-800 dark:bg-white dark:hover:bg-gray-200`}
+                      className={`absolute ${project.siteUrl ? '' : 'opacity-50 cursor-not-allowed'} bottom-4 right-6 items-center py-2 px-3 text-sm font-medium text-center dark:text-indigo-700 bg-black text-white rounded-lg hover:bg-indigo-800 dark:bg-white dark:hover:bg-gray-200`}
                     >
                       Site
                     </a>
