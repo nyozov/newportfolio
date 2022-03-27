@@ -4,6 +4,14 @@ import aircallimg from "../../assets/aircall_image.png";
 
 const myProjects = [
   {
+    name: "Gallery",
+    badges: ["React", "Firebase"],
+    img: "https://github.com/nyozov/gallery/raw/master/src/assets/preview-wide.png?raw=true",
+    url: "https://github.com/nyozov/gallery",
+    siteUrl: "https://coherent-server-332620.web.app/",
+    desc: "Image hosting app where a user can log in, upload and delete images in their personal storage. Fully functional with drag and drop upload, load transitions, and auth."
+  },
+  {
     name: "Etune",
     badges: ["React", "Express"],
     img: "https://github.com/nyozov/etune/raw/master/src/assets/wide-view.png?raw=true",
